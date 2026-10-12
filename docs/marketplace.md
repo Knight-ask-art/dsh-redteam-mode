@@ -181,7 +181,11 @@ node scripts/publish-now.mjs packages/redteam-bundle   # 打印链接 → 人验
 
 **市场条目现状**：PR #5034（首次收录）与 #5575（v0.11.x 条目）**已合并**；线上条目
 `version` 字段由 npm 自动取，发新版不需要改它。条目更新在 **PR #6076**
-（14 个随包技能 + 去武器化说明 + v0.13.0 的证据截图能力），等维护者合并。
+（14 个随包技能 + 去武器化说明 + v0.13.0 的证据截图能力），已合并。
+
+**当前 PR**：[#7223](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/7223)
+（分支 `Jueze-2019:update-dsh-redteam-mode-v0.13.1`）：条目描述补上 v0.13.1 的
+「控制台跟着当前会话走」，只改自己那一个 yml 文件。前三个 PR（#5034 / #5575 / #6076）均已合并。
 
 ### 顺带记录：绕过 2FA 的 token 还有两个副作用
 
@@ -279,6 +283,16 @@ git clone --depth 1 --filter=blob:none --sparse -b add-dsh-redteam-mode \
 cd /tmp/awesome && git sparse-checkout set data/plugins
 $EDITOR data/plugins/Jueze-2019__dsh-redteam-mode--packages-redteam-bundle.yml
 git add -A && git commit -m "data: update dsh-redteam-mode entry for vX.Y.Z" && git push
+```
+
+**市场怎么拿到新版本**：条目的 `version` 字段由站点从 npm 自动取（`npx npm@12 stage`
+之类的发布流程不必改它），站点自己还附带 `stars` / `downloads` 两个字段。所以
+"npm 发了、市场还没更新"只需要等站点下一次抓取；**只有"被描述的能力/数字"变了才需要提 PR**。
+核对方式（v0.13.1 实测）：
+
+```sh
+curl -sL https://awesome-dsh-plugin.com/plugins.json \
+  | python3 -c "import sys,json;d=json.load(sys.stdin);h=[x for x in d if 'Jueze-2019' in json.dumps(x)][0];print(h['version'],h['stars'],h['downloads'])"
 ```
 
 **发布前自检清单**（v0.9.0 起）：

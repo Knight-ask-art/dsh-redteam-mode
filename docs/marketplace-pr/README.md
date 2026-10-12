@@ -8,10 +8,12 @@
 | `entry-file.yml` | 投稿条目本体，对应市场仓库的 `data/plugins/Jueze-2019__dsh-redteam-mode--packages-redteam-bundle.yml` |
 | `pr-6076-comment-v0.13.0.md` | **当前生效**：PR [#6076](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/6076)（仍开着）上随 0.13.0 发布贴出的复核评论 |
 | `pr-6076-comment-v0.12.5.md` / `pr-6076-comment.md` | 历史：0.12.5 / 0.12.1 发布时贴过的评论 |
+| `pr-7223-comment.md` | **当前生效**：PR [#7223](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/7223)（`update-dsh-redteam-mode-v0.13.1`）：条目描述补上 v0.13.1 的「控制台跟着当前会话走」 |
 | `pr-5034-comment.md` | 历史：首次收录 PR [#5034](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/5034) 的评论（已合并；里面的"23 个技能"是去武器化之前的旧口径，别再照抄） |
 
-> 已合并的：**#5034**（首次收录）、**#5575**（v0.11.x 条目）。线上条目的 `version` 字段由 npm
-> 自动取，发新版不必改它；只有"被描述的能力"（角色数 / 技能数 / 工具数 / 页签数）变了才要动条目。
+> 已合并的：**#5034**（首次收录）、**#5575**（v0.11.x 条目）、**#6076**（v0.12.x 条目）。
+> 线上条目的 `version` 字段由 npm 自动取，发新版不必改它；只有"被描述的能力"
+> （角色数 / 技能数 / 工具数 / 页签数 / 行为特征）变了才要动条目。
 
 ## 更新流程（改版后必做）
 
